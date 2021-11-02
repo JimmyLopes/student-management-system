@@ -22,4 +22,16 @@ public class StudentService {
     public Student save(Student student) {
         return studentRepository.save(student);
     }
+
+    public Student getStudentById(Long studentId) {
+        return studentRepository.findById(studentId).get();
+    }
+
+    public Student updateStudent(Student student){
+        return studentRepository.save(student);
+    }
+
+    public void deleteStudentById(Long id) {
+        studentRepository.deleteById(id);
+    }
 }
